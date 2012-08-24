@@ -17,21 +17,16 @@ $(document).ready(function() {
 				}
 			}
 
-			//console.log(deals[i].text + '  vs ' + deal.text)
-
-			$("#qliq_json_content").append("<div class=\"qliq_animated_widget_deal\"></div>")
-			//$('.qliq_animated_widget_deal').html("<table>"
-			console.log(deal.text + ' ' + dealsLeft +' ' +  deal.redeemed + ' ' + deal.qpoint_cost)
-			str = "<table>"
+			$("#qliq_json_content").html(
+							$("#qliq_json_content").html()
+							+"<div class=\"qliq_animated_widget_deal\"><table>"
 							+ "<tr><th colspan='3'> " + deal.text + " </th></tr><tr><td> Deals Left </td><td> Deals Redeemed </td><td> QP Cost </td></tr>"
 							+ "<tr>"
 							+ "<td>" + dealsLeft + "</td>"
 							+ "<td>" + deal.redeemed + "</td>"
 							+ "<td>" + deal.qpoint_cost + "</td>"
-                            + "</tr></table>"
-            
-
-			console.log(deal.text + ' ' + dealsLeft +' ' +  deal.redeemed + ' ' + deal.qpoint_cost)
+                            + "</tr></table>></div>"
+							);
 		}
 	});
 
