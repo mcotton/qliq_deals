@@ -1,7 +1,6 @@
 
 
 $(document).ready(function() {
-console.log(QLIQ_ID) 
 				$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/' + QLIQ_ID + '/?callback=?', function(data) {
 					var deals = data.data.deals;
 
