@@ -1,6 +1,8 @@
-			$(document).ready(function() {
 
-				$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/41/?callback=?', function(data) {
+
+$(document).ready(function() {
+console.log(QLIQ_ID) 
+				$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/' + QLIQ_ID + '/?callback=?', function(data) {
 					var deals = data.data.deals;
 
 					for(var i = 0; i < deals.length; i++) {
@@ -29,4 +31,6 @@
 					$("#qliq_animated_widget_content").hide(200);
 					$("#qliq_animated_widget_open_trigger").show(100);
 				});
-			});
+
+
+})
