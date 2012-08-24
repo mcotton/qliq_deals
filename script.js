@@ -1,4 +1,3 @@
-			$(document).ready(function() {
            
 				$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/' + QLIQ_ID + '/?callback=?', function(data) {
 					var deals = data.data.deals;
@@ -29,4 +28,3 @@
 					$("#qliq_animated_widget_content").hide(200);
 					$("#qliq_animated_widget_open_trigger").show(100);
 				});
-			});
