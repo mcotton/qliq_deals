@@ -1,6 +1,6 @@
 			$(document).ready(function() {
-
-				$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/41/?callback=?', function(data) {
+           
+				$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/' + QLIQ_ID + '/?callback=?', function(data) {
 					var deals = data.data.deals;
 
 					for(var i = 0; i < deals.length; i++) {
