@@ -25,7 +25,7 @@ $(document).ready(function() {
 							+ "<td>" + dealsLeft + "</td>"
 							+ "<td>" + deal.redeemed + "</td>"
 							+ "<td>" + deal.qpoint_cost + "</td>"
-                            + "</tr></table>></div>"
+                            + "</tr></table></div>"
 							);
 		}
 	});
