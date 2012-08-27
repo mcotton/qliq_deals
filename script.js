@@ -1,4 +1,4 @@
-
+(function($) {
 
 $(document).ready(function() {
 	$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/' + QLIQ_ID + '/?callback=?', function(data) {
@@ -42,3 +42,5 @@ $(document).ready(function() {
 
 
 })
+
+})(jQuery)
