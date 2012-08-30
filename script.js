@@ -2,11 +2,11 @@
 
 d = document
 
-//var ss = document.createElement("link");
-//ss.type = "text/css";
-//ss.rel = "stylesheet";
-//ss.href = "http://test.qliqup.com/future/static/site/qliq_deals/style.css";
-//document.getElementsByTagName("head")[0].appendChild(ss);
+var ss = document.createElement("link");
+ss.type = "text/css";
+ss.rel = "stylesheet";
+ss.href = "http://static.qliqup.com/qliq_deals/style.css";
+document.getElementsByTagName("head")[0].appendChild(ss);
 
 
 s = d.createElement('script')
@@ -18,11 +18,11 @@ $('body').append('<div class="qliq_animated_widget_holder"><div id="qliq_animate
 $(document).ready(function() {
 	$.getJSON('http://test.qliqup.com/v1.2/qliqserver/public/deals/' + QLIQ_ID + '/?callback=?', function(data) {
 		var deals = data.data.deals;
+		var businessName = data.data.deals[0].name;
 		
-		$("#qliq_business_title_holder").html("<a href='http://qliqup.com'>LocName has " + deals.length + " deals on Qliq</a>");
-
+		$("#qliq_business_title_holder").html("<a href='http://qliqup.com'>" + businessName+ " has " + deals.length + " deals on Qliq</a>");
 		for(var i = 0; i < deals.length; i++) {
-			var deal = deals[i];
+			var deal = deals[i].data;
 			var dealsLeft, dealsRedeemed, qpointCost;
 			if(deal.unlimited == "true") {
 				dealsLeft = "Unlimited";
