@@ -5,21 +5,36 @@ This is the repo for the embeddable qliq widget.  You can include a snippet of H
 ####Instructions####
 ======
 Step 1:
-If you don't already have jQuery, paste this inside the `<head>` tag of your HTML.
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-        
-Step 2:
-You will need to replace the word `ID` with your business ID from Qliq.
- 
-        <script type="text/javascript">
-            QLIQ_ID = ID;
-        </script>
- 
- Step 3:
  At the end of your `<body>` tag, paste these lines and you are done.
         
-        <script type="text/javascript" src="http://test.qliqup.com/future/static/site/qliq_deals/script.js"></script>
-        <script type="text/javascript" src="http://test.qliqup.com/future/static/site/qliq_deals/script2.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+Step 2:
+
+ Change the ID variable with your Qliq business id.  You can get this info from your qliq sales rep or support@qliqup.com        
+        
+        <script type="text/javascript">QLIQ_ID = ID;</script>
+        
+Step 3:
+
+ Add this final line.
+ 
+        <script type="text/javascript" src="http://static.qliqup.com/qliq_deals/script.js"></script>
         
  
+ You completed code should look like this (using Sam's burger joint's ID)
+ 
+    <html>
+        <head>
+        </head>
+        <body>
+            <!--  Your html goes here -->
+            
+            
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+            <script type="text/javascript">QLIQ_ID = ID;</script>
+            <script type="text/javascript" src="http://static.qliqup.com/qliq_deals/script.js"></script>
+        </body>
+    </html>
