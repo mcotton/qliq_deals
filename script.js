@@ -63,42 +63,32 @@ $(document).ready(function() {
 		$("#arrow_up").toggle();
 	});
 	
-	//bouncy
-	var initialOffset = -265;
-	
-	setTimeout(
-		function(){
-			bounceAround(1);
-			},
-			1000
+	$("#qliq_animated_widget_content").animate(
+		{
+			marginTop: "-265px"
+		}, 
+		1
 	);
+	
 
-	function bounceAround(count){
-			if($("#qliq_animated_widget_content").css("marginTop") != "0px"){
-				count++;
-				var offset = parseInt($("#qliq_animated_widget_content").css("margin-top"),10);
-				console.log(offset);
-				if(count%2 == 1){
-					offset += 2;
-				}
-				else {
-					offset = initialOffset;
-				}
-				offset += "px";
-				console.log(offset);
-				$("#qliq_animated_widget_content").animate(
-					{
-						marginTop: offset
-					}, 
-					1000, 
-					function(){
-						setTimeout(function(){
-							bounceAround(count);
-							},
-						1000);
-					}
-				);
+	for(var i=0; i<=3; i++){
+		if(!$("#qliq_animated_widget_content").hasClass("qliq_visible")){
+			var offset = parseInt($("#qliq_animated_widget_content").css("margin-top"),10);
+			if(i%2 == 1){
+				offset = -265;
 			}
+			else {
+				offset = -269;
+			}
+			offset += "px";
+			console.log(offset);
+			$("#qliq_animated_widget_content").animate(
+				{
+					marginTop: offset
+				}, 
+				600
+			);
+		}
 	}
 	
 })
