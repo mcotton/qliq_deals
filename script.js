@@ -81,7 +81,6 @@ $(document).ready(function() {
 				offset = -269;
 			}
 			offset += "px";
-			console.log(offset);
 			$("#qliq_animated_widget_content").animate(
 				{
 					marginTop: offset
